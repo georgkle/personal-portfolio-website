@@ -1,139 +1,165 @@
 <!DOCTYPE html>
-<html lang="et">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minu Portfoolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #fff9f5;
-      color: #333;
+      background-color: #0d1117;
+      color: #c9d1d9;
+      line-height: 1.6;
     }
 
     header {
-      background-color: #f7c8a3;
-      color: #2b2b2b;
-      padding: 3rem 1rem;
+      background-color: #161b22;
+      padding: 2rem;
       text-align: center;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     }
 
     header h1 {
-      margin: 0;
       font-size: 2.5rem;
+      margin: 0;
+      color: #58a6ff;
     }
 
     header p {
+      margin: 0.5rem 0 0;
       font-size: 1.2rem;
-      margin-top: 0.5rem;
+      color: #8b949e;
+    }
+
+    nav {
+      background-color: #0d1117;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav a {
+      color: #58a6ff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
 
     section {
-      padding: 2rem 1rem;
       max-width: 900px;
-      margin: auto;
+      margin: 2rem auto;
+      padding: 1rem;
     }
 
     h2 {
-      border-bottom: 2px solid #f7c8a3;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1.5rem;
-      color: #444;
+      border-left: 5px solid #58a6ff;
+      padding-left: 0.5rem;
+      color: #fff;
+      margin-top: 3rem;
+    }
+
+    .subcategory {
+      margin-left: 1rem;
     }
 
     .project {
-      background-color: #fff;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-      margin-bottom: 1.5rem;
-      display: flex;
-      gap: 1rem;
-      align-items: center;
-      flex-wrap: wrap;
+      background-color: #161b22;
+      border-radius: 10px;
+      padding: 1rem;
+      margin: 1rem 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }
 
-    .project img {
-      width: 180px;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    .project h4 {
+      margin: 0 0 0.5rem;
+      color: #79c0ff;
     }
 
-    .project-info {
-      flex: 1;
+    .project p {
+      margin: 0.5rem 0;
     }
 
-    .project-info h3 {
-      margin-top: 0;
-      margin-bottom: 0.5rem;
-    }
-
-    .project-info a {
-      display: inline-block;
-      margin-right: 1rem;
-      margin-top: 0.5rem;
+    .project a {
+      color: #58a6ff;
       text-decoration: none;
-      color: #d76b00;
-      font-weight: bold;
+    }
+
+    .project a:hover {
+      text-decoration: underline;
     }
 
     footer {
       text-align: center;
-      padding: 1rem;
-      background-color: #ffeede;
-      color: #555;
-      font-size: 0.9rem;
-      margin-top: 2rem;
+      padding: 2rem;
+      color: #8b949e;
+      background-color: #161b22;
+      margin-top: 4rem;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Tere! Mina olen Sinu Nimi</h1>
-  <p>Veebiarendaja | Disainihuviline | Õppur</p>
+  <h1>My Portfolio</h1>
+  <p>Welcome to my personal project collection</p>
 </header>
 
-<section>
-  <h2>Minust</h2>
-  <p>Olen loov ja entusiastlik arendaja, kellele meeldib luua sooja ja funktsionaalset veebikogemust. Õpin pidevalt uusi tehnoloogiaid ning jagan oma projekte GitHubis.</p>
-</section>
+<nav>
+  <a href="#programming">Programming</a>
+  <a href="#sql">SQL</a>
+  <a href="#stats">Statistical Analysis</a>
+</nav>
 
-<section>
-  <h2>Projektid</h2>
+<section id="programming">
+  <h2>Programming</h2>
 
-  <div class="project">
-    <img src="https://via.placeholder.com/180" alt="Projekti pilt">
-    <div class="project-info">
-      <h3>Minu esimene projekt</h3>
-      <p>Lühikirjeldus projektist, näiteks mida see teeb või miks see on huvitav.</p>
-      <a href="https://github.com/sinu_kasutaja/projekt1" target="_blank">GitHub</a>
-      <a href="failid/projekt1_kirjeldus.pdf" target="_blank">Lae PDF</a>
+  <div class="subcategory">
+    <h3>Java</h3>
+    <div class="project">
+      <h4>Robot Battle Simulator</h4>
+      <p>A console-based Java game where virtual robots fight based on weight class and power.</p>
+      <a href="https://github.com/yourusername/robot-battle">GitHub</a> |
+      <a href="docs/robot_project.pdf">PDF</a>
     </div>
   </div>
 
-  <div class="project">
-    <img src="https://via.placeholder.com/180" alt="Teise projekti pilt">
-    <div class="project-info">
-      <h3>Teine huvitav projekt</h3>
-      <p>Veel üks projekt, mis näitab su oskusi. Võid lisada näiteks veebilehe, mängu või tööriista.</p>
-      <a href="https://github.com/sinu_kasutaja/projekt2" target="_blank">GitHub</a>
-      <a href="failid/projekt2_detailid.pdf" target="_blank">Lae PDF</a>
+  <div class="subcategory">
+    <h3>Python</h3>
+    <div class="project">
+      <h4>Data Cleaner Tool</h4>
+      <p>A Python script for cleaning and visualizing datasets using pandas and matplotlib.</p>
+      <a href="https://github.com/yourusername/data-cleaner">GitHub</a> |
+      <a href="docs/data_cleaner.pdf">PDF</a>
     </div>
   </div>
-
 </section>
 
-<section>
-  <h2>Kontakt</h2>
-  <p>Kui soovid ühendust võtta, kirjuta mulle: <a href="mailto:sinu@email.ee">sinu@email.ee</a></p>
+<section id="sql">
+  <h2>SQL</h2>
+  <div class="project">
+    <h4>Customer Database Query Set</h4>
+    <p>Set of optimized SQL queries for managing and reporting customer sales data.</p>
+    <a href="https://github.com/yourusername/sql-queries">GitHub</a> |
+    <a href="docs/sql_queries.pdf">PDF</a>
+  </div>
+</section>
+
+<section id="stats">
+  <h2>Statistical Analysis & Data Science</h2>
+  <div class="project">
+    <h4>Survey Data Analysis</h4>
+    <p>Exploratory analysis on public survey data using R and Python for visual summaries and inference.</p>
+    <a href="https://github.com/yourusername/survey-analysis">GitHub</a> |
+    <a href="docs/survey_analysis.pdf">PDF</a>
+  </div>
 </section>
 
 <footer>
-  &copy; 2025 Sinu Nimi — Soojalt loodud portfoolio
+  &copy; 2025 Your Name. Built with care and dark mode 💙
 </footer>
 
 </body>
