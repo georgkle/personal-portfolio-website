@@ -10,39 +10,30 @@
       font-family: 'Segoe UI', sans-serif;
       background-color: #0d1117;
       color: #c9d1d9;
+      line-height: 1.6;
       display: flex;
     }
 
-    aside {
+    nav {
       width: 220px;
-      height: 100vh;
       background-color: #161b22;
-      padding: 2rem 1rem;
+      height: 100vh;
+      padding-top: 2rem;
       position: fixed;
       top: 0;
       left: 0;
-      box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
     }
 
-    aside h2 {
-      color: #58a6ff;
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
-      text-align: center;
-    }
-
-    aside a {
+    nav a {
       display: block;
       color: #58a6ff;
+      padding: 1rem;
       text-decoration: none;
-      margin: 1rem 0;
       font-weight: bold;
-      transition: 0.2s;
     }
 
-    aside a:hover {
-      color: #79c0ff;
-      text-decoration: underline;
+    nav a:hover {
+      background-color: #21262d;
     }
 
     main {
@@ -51,21 +42,35 @@
       flex: 1;
     }
 
-    section {
-      max-width: 900px;
-      margin: 2rem auto;
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
     }
 
-    h1, h2 {
+    header h1 {
+      font-size: 2.5rem;
       color: #58a6ff;
     }
 
-    .intro {
-      max-width: 700px;
-      margin: 3rem auto;
-      line-height: 1.7;
-      color: #c9d1d9;
-      font-size: 1.1rem;
+    header p {
+      font-size: 1.2rem;
+      color: #8b949e;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 0 auto 3rem;
+    }
+
+    h2 {
+      border-left: 5px solid #58a6ff;
+      padding-left: 0.5rem;
+      color: #fff;
+      margin-top: 3rem;
+    }
+
+    .subcategory {
+      margin-left: 1rem;
     }
 
     .project {
@@ -81,6 +86,10 @@
       color: #79c0ff;
     }
 
+    .project p {
+      margin: 0.5rem 0;
+    }
+
     .project a {
       color: #58a6ff;
       text-decoration: none;
@@ -90,74 +99,96 @@
       text-decoration: underline;
     }
 
+    .project img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+
     footer {
       text-align: center;
       padding: 2rem;
       color: #8b949e;
+      background-color: #161b22;
       margin-top: 4rem;
     }
   </style>
 </head>
 <body>
 
-<aside>
-  <h2>Navigation</h2>
+<nav>
   <a href="#home">Home</a>
   <a href="#programming">Programming</a>
   <a href="#sql">SQL</a>
   <a href="#stats">Statistical Analysis</a>
-</aside>
+</nav>
 
 <main>
   <section id="home">
-    <h1>Hello, I'm Georg Klettenberg</h1>
-    <div class="intro">
-      <p>
-        Welcome to my personal portfolio! I'm passionate about software development, data analysis and solving meaningful problems using programming and statistics. 
-      </p>
-      <p>
-        This page is a collection of projects I've completed using Java, Python, SQL, and statistical tools. You’ll also find links to GitHub repositories and downloadable project reports in PDF format.
-      </p>
-    </div>
+    <header>
+      <h1>My Portfolio</h1>
+      <p>Welcome to my personal project collection</p>
+    </header>
   </section>
 
   <section id="programming">
     <h2>Programming</h2>
 
-    <h3>Java</h3>
-    <div class="project">
-      <h4>Video Poker</h4>
-      <p>A hasart game based on real poker but simplified, similar to slots.</p>
-      <a href="https://github.com/yourusername/robot-battle">GitHub</a> |
-      <a href="docs/robot_project.pdf">PDF</a>
+    <div class="subcategory">
+      <h3>Java</h3>
+      <div class="project">
+        <h4>Video Poker</h4>
+        <p>A hasart game based on real poker but simplified, similar to slots.</p>
+        <p><strong>Tools:</strong> Java, OOP</p>
+        <img src="images/video_poker.png" alt="Video Poker project screenshot">
+        <p>
+          <a href="https://github.com/yourusername/robot-battle">GitHub</a> |
+          <a href="docs/robot_project.pdf">PDF</a>
+        </p>
+      </div>
     </div>
 
-    <h3>Python</h3>
-    <div class="project">
-      <h4>A healthy body mass index calculator</h4>
-      <p>Gives calorie recommendations based on weight, height and user's moving habits.</p>
-      <a href="https://github.com/yourusername/data-cleaner">GitHub</a> |
-      <a href="docs/data_cleaner.pdf">PDF</a>
+    <div class="subcategory">
+      <h3>Python</h3>
+      <div class="project">
+        <h4>Healthy BMI Calculator</h4>
+        <p>Shows recommended calorie intake based on weight, height and lifestyle.</p>
+        <p><strong>Tools:</strong> Python, basic GUI</p>
+        <img src="images/bmi_calculator.png" alt="BMI calculator screenshot">
+        <p>
+          <a href="https://github.com/yourusername/data-cleaner">GitHub</a> |
+          <a href="docs/data_cleaner.pdf">PDF</a>
+        </p>
+      </div>
     </div>
   </section>
 
   <section id="sql">
     <h2>SQL</h2>
     <div class="project">
-      <h4>Football European UEFA Champions League database model</h4>
-      <p>Optimized SQL model for European football statistics.</p>
-      <a href="https://github.com/yourusername/sql-queries">GitHub</a> |
-      <a href="docs/sql_queries.pdf">PDF</a>
+      <h4>UEFA Champions League SQL Model</h4>
+      <p>An SQL-based relational model to manage football club and match data.</p>
+      <p><strong>Tools:</strong> MySQL, ER Diagram</p>
+      <img src="images/sql_model.png" alt="SQL ER Diagram">
+      <p>
+        <a href="https://github.com/yourusername/sql-queries">GitHub</a> |
+        <a href="docs/sql_queries.pdf">PDF</a>
+      </p>
     </div>
   </section>
 
   <section id="stats">
     <h2>Statistical Analysis & Data Science</h2>
     <div class="project">
-      <h4>National population statistical analysis</h4>
-      <p>Data analysis on how two counties may change based on national population statistics, with maximum distance considered.</p>
-      <a href="https://github.com/yourusername/survey-analysis">GitHub</a> |
-      <a href="docs/survey_analysis.pdf">PDF</a>
+      <h4>National Population Analysis</h4>
+      <p>Analysis of how two counties may change based on national statistics.</p>
+      <p><strong>Tools:</strong> Microsoft Excel, pivot tables, charts</p>
+      <img src="images/population_chart.png" alt="Population analysis chart">
+      <p>
+        <a href="https://github.com/yourusername/survey-analysis">GitHub</a> |
+        <a href="docs/survey_analysis.pdf">PDF</a>
+      </p>
     </div>
   </section>
 
